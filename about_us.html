@@ -64,20 +64,27 @@
             text-decoration-color: blue;
         }
         body {
-            background-image: url("pic/back.png");
+            background-image: url("pic/back111.png");
             background-size: cover; /* 背景图覆盖整个容器 */
             background-position: center; /* 背景图居中 */
             background-repeat: no-repeat; /* 背景图不重复 */
         }
         .large-white {
-            color: white;
+            font-family: 微软雅黑;
+            color: #86b7fe;
             font-size: 400%;
-            font-family: 黑体;
         }
         .middle-white {
-            color: white;
+            color: #86b7fe;
             font-size: 300%;
-            font-family: 仿宋_GB2312;
+            font-family: 微软雅黑;
+        }
+        .left-white {
+            color: #86b7fe;
+            font-size: 300%;
+            font-family: 微软雅黑;
+            text-align: left;
+            /*margin-left: auto;*/
         }
         /* 图片轮播容器 */
         .carousel {
@@ -107,6 +114,27 @@
             display: block;
         }
     </style>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 两列，各占50% */
+            gap: 20px;                     /* 间距 */
+            align-items: center;           /* 垂直居中 */
+        }
+        .image-content {
+            min-width: 480px;
+            display: flex;           /* 让图片横向排列 */
+            gap: 10px;              /* 图片间距 */
+            /*justify-content: flex-end; !* 图片靠右（可选） *!*/
+            /*justify-content: right;*/
+        }
+        .image-content img {
+            width: 100%;           /* 图片宽度自适应容器 */
+            max-width: 250px;      /* 控制单张图片最大宽度 */
+            height: auto;          /* 保持比例 */
+            object-fit: cover;     /* 防止图片变形（可选） */
+        }
+    </style>
 </head>
 <body>
 <div style="text-align: center">
@@ -132,21 +160,35 @@
             </div>
         </div>
     </nav>
+    &nbsp
     <h1 class="large-white">关于我们</h1>
+    <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
     <div class="row g-5">
         <div class="col">
             <h4 class="mb-3"></h4>
             <form class="needs-validation" novalidate>
-                <h2 class="middle-white">
-                    <p>为了方便使用方和管理方更好的了解、使用和管理我们的产品，<br>我们制作了“智捷药箱”软件APP，以下为软件运行展示：</p>
-                    <div class="carousel">
-                        <div class="carousel-inner">
-                            <img src="pic/app1.png" alt="Image 1" class="active">
-                            <img src="pic/app2.png" alt="Image 2">
-                            <img src="pic/app3.png" alt="Image 3">
-                        </div>
+                <div class="container">
+                    <div class="text-content">
+                        <h2 class="left-white">为方便使用方和管理方更好的了解、使用和管理我们的产品，<br>我们制作了“智捷药箱”软件APP，以下为软件运行展示：</h2>
                     </div>
-                </h2>
+
+                    <div class="image-content">
+                        <img src="./pic/app1.png" alt="Image 1">
+                        <img src="./pic/app2.png" alt="Image 2">
+                        <img src="./pic/app3.png" alt="Image 3">
+                    </div>
+                </div>
+
+<!--                <h2 class="left-white">-->
+<!--                    <p>为了方便使用方和管理方更好的了解、<br>使用和管理我们的产品，<br>我们制作了“智捷药箱”软件APP，<br>以下为软件运行展示：</p>-->
+<!--                    <p>&nbsp;</p>-->
+<!--                    <div class="image-content">-->
+<!--                        <img src="pic/app1.png" alt="Image 1">-->
+<!--                        <img src="pic/app2.png" alt="Image 2">-->
+<!--                        <img src="pic/app3.png" alt="Image 3">-->
+<!--                    </div>-->
+<!--                </h2>-->
+
             </form>
         </div>
     </div>
